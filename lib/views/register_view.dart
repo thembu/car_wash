@@ -127,7 +127,7 @@ class _register_viewState extends State<register_view> {
                       ),
                       validator: (value) {
                         if (value == null || value.isEmpty) {
-                          return 'Please enter your phone number';
+                          return ' enter your phone number';
                         }
                         return null;
                       },
