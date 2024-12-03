@@ -1,3 +1,4 @@
+import 'package:car_wash/views/login_view.dart';
 import 'package:car_wash/views/wave.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart'; // Import image_picker package
@@ -50,7 +51,7 @@ class _register_viewState extends State<register_view> {
                 child: CircleAvatar(
                   radius: 80, // Size of the avatar
                   backgroundImage: _image == null
-                      ? AssetImage('assets/default_avatar.png') as ImageProvider
+                      ? AssetImage('assets/user.png') as ImageProvider
                       : FileImage(_image!), // Display picked image or default image
                   child: _image == null
                       ? const Icon(Icons.camera_alt, size: 40, color: Colors.white) // Show camera icon when no image
@@ -155,10 +156,9 @@ class _register_viewState extends State<register_view> {
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState?.validate() ?? false) {
-                          // If the form is valid, proceed with registration logic
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(content: Text('Registering...')),
-                          );
+                         // If the form is valid, proceed with registration logic
+                          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => login_view()));
+
                         }
                       },
                       child: const Text('Register'),

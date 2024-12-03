@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
 
       routes: {
 
-        '/register' : (context) => register_view()
+        '/register' : (context) => register_view(),
+        '/login ' : (context) => login_view()
       },
 
     );
