@@ -1,17 +1,17 @@
-import 'package:car_wash/views/login_view.dart';
-import 'package:car_wash/views/wave.dart';
+import 'package:car_wash/views/Front-End-Authentication/login_view.dart';
+import 'package:car_wash/views/Front-End-Authentication/wave.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart'; // Import image_picker package
 import 'dart:io'; // For using File to display the image
 
-class register_view extends StatefulWidget {
-  const register_view({super.key});
+class car_wash_register_view extends StatefulWidget {
+  const car_wash_register_view({super.key});
 
   @override
-  State<register_view> createState() => _register_viewState();
+  State<car_wash_register_view> createState() => _car_wash_register_viewState();
 }
 
-class _register_viewState extends State<register_view> {
+class _car_wash_register_viewState extends State<car_wash_register_view> {
   File? _image; // Variable to hold the picked image
   final _formKey = GlobalKey<FormState>(); // Key for the form to manage state
 
@@ -156,7 +156,7 @@ class _register_viewState extends State<register_view> {
                     ElevatedButton(
                       onPressed: () {
                         if (_formKey.currentState?.validate() ?? false) {
-                         // If the form is valid, proceed with registration logic
+                          // If the form is valid, proceed with registration logic
                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => login_view()));
 
                         }

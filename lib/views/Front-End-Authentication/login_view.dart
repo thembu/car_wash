@@ -108,7 +108,9 @@ class _login_viewState extends State<login_view> {
                     ),
                     SizedBox(height: 20),
                     ElevatedButton(
-                      onPressed: _login,
+                      onPressed: () => {
+                        Navigator.pushReplacementNamed((context), '/home')
+                      },
 
                       style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.symmetric(vertical: 15),
@@ -139,7 +141,7 @@ class _login_viewState extends State<login_view> {
                             ),),
                           onTap: () async{
 
-                            Navigator.pushReplacementNamed((context), '/register');
+                            Navigator.pushReplacementNamed((context), '/registration_option');
 
 
                           },
